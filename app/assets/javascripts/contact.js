@@ -7,6 +7,6 @@ $(document).ready(function() {
 
 	$('.button').on("submit", "form", function() {
 		$(".form").fadeOut('slow').addClass("hidden")
-		$("#mailer").removeClass("hidden").fadeIn('slow')
+		$("#mailer").fadeIn('slow').removeClass("hidden")
 	})
 });
