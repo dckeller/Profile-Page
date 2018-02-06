@@ -85,7 +85,7 @@ href="https://fonts.googleapis.com/css?family=Roboto">
                 <div id="mailer">
                     <a><%= image_tag("mail.png", width: "300", height: "200") %></a>
                 </div>
-                <div class="form">
+                <div class="form hidden">
                 <%= form_for @contact do |f| %>
                     <% if flash[:error].present? %>
                         <p> flash[:error]</p>
