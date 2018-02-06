@@ -7,6 +7,7 @@
 href="https://fonts.googleapis.com/css?family=Finger Paint">
 <link rel="stylesheet"
 href="https://fonts.googleapis.com/css?family=Roboto">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <body>
     <div class="bg">
         <div class="container">
@@ -83,23 +84,11 @@ href="https://fonts.googleapis.com/css?family=Roboto">
 
             <footer>
                 <div id="mailer">
+                    <h5 id="notice"><%= notice %></h5>
                     <a><%= image_tag("mail.png", width: "300", height: "200") %></a>
                 </div>
                 <div class="form hidden">
-                <%= form_for @contact do |f| %>
-                    <% if flash[:error].present? %>
-                        <p> flash[:error]</p>
-                    <% end %>
-                    <%= f.text_field :name, required: true, placeholder: "Tell me your name" %><br>
-
-                    <%= f.text_field :email, required: true, placeholder: "Tell me your email" %><br>
-
-                    <%= f.text_area :message, as: :text, placeholder: "Tell me something" %><br>
-
-                    <%= f.hidden_field :nickname, hint: 'leave this field blank' %>
-
-                    <%= f.submit 'Send Message', class: "button" %>
-                <% end %>
+                    <%= render 'contact_form' %>
                 </div>
             </footer>
         </div>

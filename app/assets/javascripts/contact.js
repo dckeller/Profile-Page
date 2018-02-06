@@ -5,8 +5,11 @@ $(document).ready(function() {
 		$(".form").fadeIn('slow').removeClass("hidden")
 	})
 
-	$('.button').on("submit", "form", function() {
+	$('.button').bind("submit", function() {
 		$(".form").fadeOut('slow').addClass("hidden")
 		$("#mailer").fadeIn('slow').removeClass("hidden")
 	})
+
+	$('#notice').delay(3000).fadeTo(300, 0);
+
 });

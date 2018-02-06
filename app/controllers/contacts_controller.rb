@@ -7,12 +7,15 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     @contact.request = request
-    if @contact.deliver
-      flash.now[:error] = nil
-  		redirect_to root_path(anchor: 'mailer'), notice: 'Message sent successfully'
-    else
-      flash.now[:error] = 'Cannot send message'
-      render :new
-    end
+    respond_to do |f|
+      if @contact.deliver
+        @contact = Contact.new
+        f.html { redirect_to root_path(anchor: 'mailer'), notice: 'Message Sent' }
+        flash.now[:error] = nil
+      else
+        redirect_to root_path(anchor: 'mailer'), notice: 'Message Unable To Send'
+        flash.now[:error] = 'Cannot send message'
+      end
+    end 
   end
 end
