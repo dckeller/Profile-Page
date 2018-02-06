@@ -1,22 +1,109 @@
-<%= form_for @contact do |f| %>
-    <% if flash[:error].present? %>
-        <p> flash[:error]</p>
-    <% end %>
-    <%= f.label :name %> <br>
-    <%= f.text_field :name, required: true %>
+<!DOCTYPE html>
+<html>
+<head>
+<% @title="I Am David Keller" %>
+<title><%= @title %></title>
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css?family=Finger Paint">
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css?family=Roboto">
+<body>
 
-    <br>
-    <%= f.label :email %> <br>
-    <%= f.text_field :email, required: true %>
+    <div class="bg">
+        <div class="container">
+            <a><%= image_tag("david.jpg", class: "avatar") %></a>
 
-    <br>
-    <%= f.label :message %> <br>
-    <%= f.text_area :message, as: :text %>
+            <div class="links">
+                <ul>    
+                    <li><a><%= link_to "Linkedin", "https://www.linkedin.com/in/davidckeller1", target: :_blank %></a></li>
+                    <li><a><%= link_to "GitHub", "https://github.com/dckeller", target: :_blank %></a></li>
+                    <li><a><%= link_to "Community", "#community" %></a></li>
+                    <li><a><%= link_to "Skills", "#skills" %></a></li>
+                    <li><a><%= link_to "Contact", "#contact" %></a></li>
+                </ul>
+            </div>
 
- 
-    <%= f.label :nickname %> <br>
-    <%= f.text_field :nickname, hint: 'leave this field blank' %>
+            <div class="heading">   
+                <h1>David Keller</h1>
+                <h2>Full Stack Developer | Marketing Consultant</h2>
+                <p>A resourceful, innovative and commercially minded software developer with experience in providing the vision and organization required to ensure a high quality product and service. A highly motivated self-starter with strong communication skills and the necessary knowledge and abilities to develop ideas into highly effective growth strategies and drive projects forward.</p>
+            </div>
+        </div>
 
+        <div class="absolute">
+            <h4 id="projects">PROJECTS</h4>
 
-    <%= f.submit 'Send Message', class: "button" %>
-  <% end %>
+            <div class="section">
+                <a><%= image_tag("pokemon.png", width: "200", height: "150", class: "pokemonphoto") %></a>
+                <h5>Poke'mon API</h5>
+                <div class="connects">
+                    <a><%= link_to "Page", "http://pokefinderapp.herokuapp.com/" %></a>  |  <a><%= link_to "GitHub", "https://github.com/dckeller/Pokemon-API" %></a>
+                </div>
+                <p>This is a web application made using the public Poke'mon API, Sinatra, Application Record, HTML, and homemade using CSS.</p>
+            </div>
+
+            <div class="section">
+                <a><%= image_tag("gear.png", width: "200", height: "125", class: "gearphoto") %></a>
+                <div class="gear-text">
+                    <h5>GearShare Webapp</h5>
+                    <div class="connects">
+                        <a><%= link_to "Page", "http://grshare.herokuapp.com/" %></a>  |  <a><%= link_to "GitHub", "https://github.com/dckeller/Gear-Share" %></a>
+                    </div>
+                    <p>This is a full stack web application designed as a camping exchange application.  This was made in just a few days using Ruby Rails, AJAX, JQuery, Bootstrap, Amazon Web Services to store pictures, PaperClip to post images, the Google Maps API and much more!.</p>
+                </div>  
+            </div>
+
+            <h4 id="community">COMMUNITY ASSOCIATIONS</h4>
+            <div class="community">
+                <h3 class="community-link">Nov 2017 - UtahJS Learners Meetup - Presenter</h3> 
+                <p>I just moved to Salt Lake City and this was my first meetup that I attended.  The presenter didn't show so I put a presentation toegther on Jasmine testing with JavaScript.</p>
+                <h3 class="community-link">Jan 2018 - UtahJS Learners Meetup - Presenter</h3>
+                <p>I had been working with the host of the Meetup group and gave a presentation on traversing the DOM, and using the Chrome console as a debugging tool.</p>
+                <h3>Jan 2018 - Utah Dept. of Work Service, Refugee Division - Educating Volunteer</h3>
+                <p>I met some of the organization leaders and they were looking for help with educating refugees beginners JAvaScript techniques.  I assist with educating these eager studetns JavaScript techniques.</p>
+            </div><br>
+
+            <h4 id="skills">SKILLS</h4>
+            <div class="skills">
+                <a><%= image_tag("ajax.png", size: "200") %></a>
+                <a><%= image_tag("aws.png", size: "200") %></a>
+                <a><%= image_tag("bootstrap.png", size: "200") %></a>
+                <a><%= image_tag("css.svg", size: "200") %></a>
+                <a><%= image_tag("html.png", size: "200") %></a>
+                <a><%= image_tag("jq.png", size: "200") %></a>
+                <a><%= image_tag("js.png", size: "200") %></a>
+                <a><%= image_tag("node.jpg", size: "200") %></a>
+                <a><%= image_tag("rails.png", size: "200") %></a>
+                <a><%= image_tag("rspec.png", size: "200") %></a>
+                <a><%= image_tag("ruby.png", size: "200") %></a>
+                <a><%= image_tag("sql.png", size: "200") %></a>
+                <a><%= image_tag("jasmine.png", size: "200") %></a>
+            </div>
+
+            <h4 id="contact">CONTACT ME</h4>
+
+            <center>
+                <div id="mailer">
+                    <a><%= image_tag("mail.png", width: "300", height: "200") %></a>
+                </div>
+                <div class="form">
+                <%= form_for @contact do |f| %>
+                    <% if flash[:error].present? %>
+                        <p> flash[:error]</p>
+                    <% end %>
+                    <%= f.text_field :name, required: true, placeholder: "Tell me your name" %><br>
+
+                    <%= f.text_field :email, required: true, placeholder: "Tell me your email" %><br>
+
+                    <%= f.text_area :message, as: :text, placeholder: "Tell me something" %><br>
+
+                    <%= f.hidden_field :nickname, hint: 'leave this field blank' %>
+
+                    <%= f.submit 'Send Message', class: "button" %>
+                <% end %>
+                </div>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
