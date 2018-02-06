@@ -5,8 +5,8 @@ $(document).ready(function() {
 		$(".form").fadeIn('slow').removeClass("hidden")
 	})
 
-	$('.button').on("submit", "form" function() {
+	$('.button').on("submit", "form", function() {
 		$(".form").fadeOut('slow').addClass("hidden")
-		$("#mailer").fadeIn('slow').removeClass("hidden")
+		$("#mailer").removeClass("hidden").fadeIn('slow')
 	})
 });
