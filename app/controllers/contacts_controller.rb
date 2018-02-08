@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
   
-  def new 
-    @contact = Contact.new
+  def index 
+    @contact = Contact.new(params[:contact])
   end
 
   def create
@@ -10,11 +10,11 @@ class ContactsController < ApplicationController
     respond_to do |f|
       if @contact.deliver
         @contact = Contact.new
-        f.html { redirect_to root_path(anchor: 'mailer'), notice: 'Message Sent' }
-        flash.now[:error] = nil
+        f.html { render 'index' }
+        f.js { flash.now[:success] = @message = "Thank you for your message, I'll get back to you soon!" }
       else
-        redirect_to root_path(anchor: 'mailer'), notice: 'Message Unable To Send'
-        flash.now[:error] = 'Cannot send message'
+        f.html { render 'index' }
+        f.now[:error] = @message = "Cannot send message at this time." }
       end
     end 
   end

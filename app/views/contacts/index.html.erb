@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<% @title="I Am David Keller" %>
-<title><%= @title %></title>
+<title>Davids Page</title>
 <link rel="stylesheet"
 href="https://fonts.googleapis.com/css?family=Finger Paint">
 <link rel="stylesheet"
@@ -49,7 +48,7 @@ href="https://fonts.googleapis.com/css?family=Roboto">
                     <div class="connects">
                         <a><%= link_to "Page", "http://grshare.herokuapp.com/" %></a>  |  <a><%= link_to "GitHub", "https://github.com/dckeller/Gear-Share" %></a>
                     </div>
-                    <p>This is a full stack web application designed as a camping exchange application.  This was made in just a few days using Ruby Rails, AJAX, JQuery, Bootstrap, Amazon Web Services to store pictures, PaperClip to post images, the Google Maps API and much more!.</p>
+                    <p>This is a full stack web application designed as a camping exchange application.  This was made in just a few days using Ruby Rails, AJAX, JQuery, Bootstrap, Amazon Web Services to store pictures, PaperClip to post images, the Google Maps API and much more.</p>
                 </div>  
             </div>
 
@@ -84,10 +83,9 @@ href="https://fonts.googleapis.com/css?family=Roboto">
 
             <footer>
                 <div id="mailer">
-                    <h5 id="notice"><%= notice %></h5>
                     <a><%= image_tag("mail.png", width: "300", height: "200") %></a>
                 </div>
-                <div class="form hidden">
+                <div id="contact">
                     <%= render 'contact_form' %>
                 </div>
             </footer>

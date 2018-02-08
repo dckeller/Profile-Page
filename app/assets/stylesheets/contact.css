@@ -164,7 +164,7 @@ li a:hover {
 }
 
 
-.form {
+#contact {
 	background: rgba(255, 255, 255, 0.7);
 	text-align: center;
 	margin-left: 100px;
@@ -181,18 +181,18 @@ footer {
 	margin-bottom: 100px;	
 }
 
-#notice {
+.alert-success {
 	margin: 0 auto;
 	color: brown;
 	background: rgba(255, 255, 255, 0.7);
-	width: 200px;
+	width: 400px;
 }
 
 .hidden {
 	display: none;
 }
 
-input[type=text] {
+.contact_text {
 	width: 80%;
 	font-family: "Helvetica";
 	font-size: 110%;
@@ -214,7 +214,7 @@ input[type=text] {
   border-bottom: 2px solid brown;
 }
 
-input[type=submit] {
+.button {
 	margin: 0 auto;
 	background-color: brown;
 	color: white;
