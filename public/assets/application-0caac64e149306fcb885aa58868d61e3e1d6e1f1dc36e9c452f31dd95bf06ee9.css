@@ -1,0 +1,293 @@
+body, html {
+	height: 100%; 
+}
+
+body {
+	background: url("brownbg.jpg");
+	background-position: center center;
+  background-repeat: no-repeat;
+	background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+	font-family: "Helvetica";
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.container {
+	margin-top: 20px;
+}
+
+h2 {
+	font-family: "Helvetica";
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+h3 {
+	font-family: "Helvetica";
+	font-size: 130%;
+}
+
+p { 
+	font-size: 130%;
+}
+
+h4 {
+	text-align: center;
+	font-family: "Roboto";
+	font-size: 40px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	color: brown;
+}
+
+h5 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-family: "Helvetica";
+	font-size: 150%;
+}
+
+.avatar {
+	width: 260px;
+	height: 266px;
+	margin-left: 100px;
+	float: left;
+}
+
+.heading {
+	background: rgba(255, 255, 255, 0.7);
+	margin-left: 370px;
+	margin-right: 100px;
+	padding: 10px;
+}
+
+
+.pokemonphoto {
+	border: 2px solid black;
+	transform: rotate(7deg);
+	width: 300px;
+	height: 200px;
+	float: right;
+}
+
+.gearphoto {
+	transform: rotate(353deg);
+	width: 300px;
+	height: 200px;
+	float: left;
+}
+
+.gear-text {
+	margin-left: 330px;
+}
+
+.section {
+	background: rgba(255, 255, 255, 0.7);
+	padding: 10px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+}
+
+.links {
+	margin-left: 370px;
+	margin-right: 100px;
+}
+
+.links ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: right;
+}
+
+li a {
+	display: block;
+	color: white;
+	font-family: "Helvetica";
+	font-size: 125%;
+	text-align: center;
+	padding: 5px 14px;
+	text-decoration: none;
+}
+
+li a:hover {
+	color: brown;
+}
+
+.connects a:hover {
+	font-family: "Helvetica";
+	font-size: 110%;
+	border: 1px solid black;
+	text-decoration: none;
+}
+
+.connects a {
+	color: brown;
+	font-family: "Helvetica";
+	font-size: 110%;
+	text-decoration: none;
+}
+
+.skills {
+	background: rgba(255, 255, 255, 0.7);
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 10px;
+	text-align: center;
+}
+
+.skills  a {
+	height: 200px;
+	width: 200px;
+	margin: 18px;
+}
+
+.community {
+	background: rgba(255, 255, 255, 0.7);
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 10px;
+}
+
+.community-link {
+	display: inline-block;
+}
+
+
+#contact {
+	background: rgba(255, 255, 255, 0.7);
+	text-align: center;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 50px;
+	padding: 10px;
+	padding-bottom: 40px;
+}
+
+footer {
+	text-align: center;
+}
+
+#mailer {
+	margin-bottom: 130px;	
+}
+
+.alert-success {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	margin: 0;
+	color: brown;
+	font-size: 130%;
+}
+
+.hidden {
+	display: none;
+}
+
+#contact_name {
+	width: 80%;
+	font-family: "Helvetica";
+	font-size: 110%;
+	margin-bottom: 10px;
+	height: 30px;
+	background: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 2px solid brown;
+}
+
+#contact_email {
+	width: 80%;
+	font-family: "Helvetica";
+	font-size: 110%;
+	margin-bottom: 10px;
+	height: 30px;
+	background: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 2px solid brown;
+}
+
+#contact_message {
+	width: 80%;
+	font-family: "Helvetica";
+	font-size: 115%;
+	margin-bottom: 10px;
+	height: 100px;
+	background: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 2px solid brown;
+}
+
+.button {
+	margin: 0 auto;
+	background-color: brown;
+	color: white;
+	padding: 15px 32px;
+}
+
+@media only screen and (max-width: 900px) {
+    .avatar {
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 20px;
+			display: block;
+			float: none;
+		}
+
+			.heading {
+			background: rgba(255, 255, 255, 0.7);
+			margin-left: 100px;
+			margin-right: 100px;
+			padding: 10px;
+		}
+
+		.links {
+			margin-left: 100px;
+			margin-right: 100px;
+		}
+
+		.links ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: #333;
+		}
+
+		.pokemonphoto {
+			transform: none;
+		}
+
+		.gearphoto {
+			transform: none;
+		}
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
