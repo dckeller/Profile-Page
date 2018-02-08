@@ -179,10 +179,40 @@ footer {
 }
 
 #mailer {
-	margin-bottom: 130px;	
+	margin-bottom: 140px;	
 }
 
 .alert-success {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	margin: 0;
+	color: brown;
+	font-size: 130%;
+}
+
+.alert-error {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	margin: 0;
+	color: brown;
+	font-size: 130%;
+}
+
+.alert-notice {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	margin: 0;
+	color: brown;
+	font-size: 130%;
+}
+
+.alert-alert {
 	position: absolute;
 	z-index: 1;
 	left: 0;
