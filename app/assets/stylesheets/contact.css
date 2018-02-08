@@ -18,6 +18,7 @@ h1 {
 
 .container {
 	margin-top: 20px;
+	vertical-align: middle;
 }
 
 h2 {
@@ -266,7 +267,7 @@ footer {
 	padding: 15px 32px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
     .avatar {
 			width: 300px;
 			height: 300px;
@@ -278,11 +279,15 @@ footer {
 			float: none;
 		}
 
-			.heading {
+		.heading {
 			background: rgba(255, 255, 255, 0.7);
 			margin-left: 100px;
 			margin-right: 100px;
 			padding: 10px;
+		}
+
+		div.section {
+			min-height: 210px;
 		}
 
 		.links {
