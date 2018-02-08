@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
         f.js { flash.now[:success] = @message = "Thank you for your message, I'll get back to you soon!" }
       else
         f.html { render 'index' }
-        f.now[:error] = @message = "Cannot send message at this time." }
+        f.js { flash.now[:error] = @message = "Cannot send message at this time." }
       end
     end 
   end

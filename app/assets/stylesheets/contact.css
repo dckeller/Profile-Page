@@ -169,8 +169,9 @@ li a:hover {
 	text-align: center;
 	margin-left: 100px;
 	margin-right: 100px;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 	padding: 10px;
+	padding-bottom: 40px;
 }
 
 footer {
@@ -178,21 +179,35 @@ footer {
 }
 
 #mailer {
-	margin-bottom: 100px;	
+	margin-bottom: 130px;	
 }
 
 .alert-success {
-	margin: 0 auto;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	margin: 0;
 	color: brown;
-	background: rgba(255, 255, 255, 0.7);
-	width: 400px;
+	font-size: 130%;
 }
 
 .hidden {
 	display: none;
 }
 
-.contact_text {
+#contact_name {
+	width: 80%;
+	font-family: "Helvetica";
+	font-size: 110%;
+	margin-bottom: 10px;
+	height: 30px;
+	background: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 2px solid brown;
+}
+
+#contact_email {
 	width: 80%;
 	font-family: "Helvetica";
 	font-size: 110%;
@@ -219,7 +234,6 @@ footer {
 	background-color: brown;
 	color: white;
 	padding: 15px 32px;
-	margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 900px) {

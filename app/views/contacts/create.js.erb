@@ -1,2 +1,4 @@
 $('#contact').html("<%= j render 'contact_form' %>");
-$('#flash-message').html("<%= j render 'flash' %>").delay(3000).fadeOut(4000);
+$('#flash-message').html("<%= j render 'flash' %>").delay(3000).fadeTo(4000, 0);
+$('#contact').delay(3000).fadeTo(4000, 0);
+$('#mailer').delay(3000).fadeIn('slow');
